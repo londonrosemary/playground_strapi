@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_identifier_people",
+  "info": {
+    "displayName": "person",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    }
+  }
+}

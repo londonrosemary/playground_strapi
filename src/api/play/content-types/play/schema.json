@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plays",
+  "info": {
+    "singularName": "play",
+    "pluralName": "plays",
+    "displayName": "play",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "genre": {
+      "type": "enumeration",
+      "enum": [
+        "Comedy",
+        "Drama",
+        "Tragedy",
+        "Farce",
+        "Mystery",
+        "Morality Play",
+        "Theatre of the Absurd",
+        "Comedy of Manners",
+        "Other"
+      ],
+      "required": true
+    },
+    "time_period": {
+      "type": "enumeration",
+      "enum": [
+        "Classic",
+        "Contemporary",
+        "Shakespeare",
+        "Other"
+      ],
+      "required": true
+    },
+    "monologues": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::monologue.monologue",
+      "mappedBy": "play"
+    },
+    "author": {
+      "type": "component",
+      "repeatable": false,
+      "component": "identifier.person"
+    }
+  }
+}
