@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plays",
+  "info": {
+    "singularName": "play",
+    "pluralName": "plays",
+    "displayName": "Play"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "genre": {
+      "type": "string"
+    },
+    "length": {
+      "type": "string"
+    },
+    "num_char": {
+      "type": "integer"
+    },
+    "time_period": {
+      "type": "string"
+    },
+    "copy_avail": {
+      "type": "boolean"
+    },
+    "synopsis": {
+      "type": "richtext"
+    }
+  }
+}
